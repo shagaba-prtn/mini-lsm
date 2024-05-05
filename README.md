@@ -110,3 +110,56 @@ We have 3 weeks + 1 extra week (in progress) for this tutorial.
 ## License
 
 The Mini-LSM starter code and solution are under [Apache 2.0 license](LICENSE). The author reserves the full copyright of the tutorial materials (markdown files and figures).
+
+
+cargo x install-tools
+
+cargo x check
+
+cargo run --bin mini-lsm-cli-ref
+
+
+mini-lsm-cli> fill 1 9
+9 values filled with epoch 0
+
+
+mini-lsm-cli> get 5
+5=b"value5@0"
+
+
+mini-lsm-cli> scan 1 9
+b"1"=b"value1@0"
+b"2"=b"value2@0"
+b"3"=b"value3@0"
+b"4"=b"value4@0"
+b"5"=b"value5@0"
+b"6"=b"value6@0"
+b"7"=b"value7@0"
+b"8"=b"value8@0"
+b"9"=b"value9@0"
+
+9 keys scanned
+
+
+mini-lsm-cli> del 5
+5 deleted
+
+
+mini-lsm-cli> get 5
+5 not exist
+
+
+mini-lsm-cli> scan 1 9
+b"1"=b"value1@0"
+b"2"=b"value2@0"
+b"3"=b"value3@0"
+b"4"=b"value4@0"
+b"6"=b"value6@0"
+b"7"=b"value7@0"
+b"8"=b"value8@0"
+b"9"=b"value9@0"
+
+8 keys scanned
+
+
+quit

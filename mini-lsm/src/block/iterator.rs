@@ -46,38 +46,33 @@ impl BlockIterator {
 
     /// Creates a block iterator and seek to the first entry.
     pub fn create_and_seek_to_first(block: Arc<Block>) -> Self {
-        let mut iter = Self::new(block);
-        iter.seek_to_first();
-        iter
+        unimplemented!()
     }
 
     /// Creates a block iterator and seek to the first key that >= `key`.
     pub fn create_and_seek_to_key(block: Arc<Block>, key: KeySlice) -> Self {
-        let mut iter = Self::new(block);
-        iter.seek_to_key(key);
-        iter
+        unimplemented!()
     }
 
     /// Returns the key of the current entry.
     pub fn key(&self) -> KeySlice {
-        debug_assert!(!self.key.is_empty(), "invalid iterator");
-        self.key.as_key_slice()
+        unimplemented!()
     }
 
     /// Returns the value of the current entry.
     pub fn value(&self) -> &[u8] {
-        debug_assert!(!self.key.is_empty(), "invalid iterator");
-        &self.block.data[self.value_range.0..self.value_range.1]
+        unimplemented!()
     }
 
     /// Returns true if the iterator is valid.
+    /// Note: You may want to make use of `key`
     pub fn is_valid(&self) -> bool {
-        !self.key.is_empty()
+        unimplemented!()
     }
 
     /// Seeks to the first key in the block.
     pub fn seek_to_first(&mut self) {
-        self.seek_to(0);
+        unimplemented!()
     }
 
     /// Seeks to the idx-th key in the block.

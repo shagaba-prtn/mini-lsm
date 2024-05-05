@@ -83,12 +83,6 @@ impl BlockBuilder {
 
     /// Finalize the block.
     pub fn build(self) -> Block {
-        if self.is_empty() {
-            panic!("block should not be empty");
-        }
-        Block {
-            data: self.data,
-            offsets: self.offsets,
-        }
+        unimplemented!()
     }
 }
